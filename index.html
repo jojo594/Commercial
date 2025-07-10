@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyacıoğlu Turizm - Unforgettable Journeys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Boyacıoğlu Turizm</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#hero" class="nav-link" data-key="nav-home">Home</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link" data-key="nav-services">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-key="nav-contact">Contact</a></li>
+                <li class="nav-item lang-switcher">
+                    <a href="#" class="lang-link active" data-lang="en">EN</a>
+                    <span>/</span>
+                    <a href="#" class="lang-link" data-lang="tr">TR</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-key="hero-title">Discover Your Next Adventure</h1>
+                <p data-key="hero-subtitle">Custom van services designed for the modern explorer.</p>
+                <a href="#services" class="cta-button" data-key="hero-button">Explore Services</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2 data-key="services-title">Our Services</h2>
+            <div class="trip-cards-container">
+                <div class="trip-card">
+                    <img src="viptransfer.jpeg" alt="VIP Transfers" class="tour-image">
+                    <div class="trip-card-content">
+                        <h3 data-key="vip-title">VIP Transfers</h3>
+                        <p class="tour-description" data-key="vip-desc">Travel in style and comfort with our exclusive VIP transfer service. Perfect for business travel, special occasions, or simply a luxurious ride.</p>
+                    </div>
+                </div>
+                <div class="trip-card">
+                    <img src="airportTransfer.jpg" alt="Airport Transfer" class="tour-image">
+                    <div class="trip-card-content">
+                        <h3 data-key="airport-title">Airport Transfer</h3>
+                        <p class="tour-description" data-key="airport-desc">Reliable and timely airport transfers to get you to your flight or destination without any hassle. We track your flight and adjust for delays.</p>
+                    </div>
+                </div>
+                 <div class="trip-card">
+                    <img src="cityTours.webp" alt="In City Tour" class="tour-image">
+                    <div class="trip-card-content">
+                        <h3 data-key="city-title">In City Tours</h3>
+                        <p class="tour-description" data-key="city-desc">Dive into history and culture by exploring ancient cities and their timeless stories.</p>
+                    </div>
+                </div>
+                <div class="trip-card">
+                    <img src="abroad.png" alt="Abroad Tour" class="tour-image">
+                     <div class="trip-card-content">
+                        <h3 data-key="abroad-title">Abroad Tours</h3>
+                        <p class="tour-description" data-key="abroad-desc">Conquer majestic peaks and enjoy stunning mountain vistas. An adventure for the adventurers .</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2 data-key="contact-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+905412956090">+90 541 295 60 90</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/gunayboyacioglu" target="_blank">@gunayboyacioglu</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/905412956090" target="_blank" data-key="contact-whatsapp">Chat on WhatsApp</a>
+            </div>
+        </div>
+        <p class="copyright" data-key="copyright">&copy; 2024 Boyacıoğlu Turizm. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tourCards = document.querySelectorAll('.trip-card');
+
+            tourCards.forEach(card => {
+                const img = card.querySelector('.tour-image');
+                img.addEventListener('click', () => {
+                    card.classList.toggle('active');
+                });
+            });
+
+            const translations = {
+                en: {
+                    'nav-home': 'Home',
+                    'nav-services': 'Services',
+                    'nav-contact': 'Contact',
+                    'hero-title': 'Discover Your Next Adventure',
+                    'hero-subtitle': 'Custom van tours designed for the modern explorer.',
+                    'hero-button': 'Explore Services',
+                    'services-title': 'Our Services',
+                    'vip-title': 'VIP Transfers',
+                    'vip-desc': 'Travel in style and comfort with our exclusive VIP transfer service. Perfect for business travel, special occasions, or simply a luxurious ride.',
+                    'airport-title': 'Airport Transfer',
+                    'airport-desc': 'Reliable and timely airport transfers to get you to your flight or destination without any hassle. We track your flight and adjust for delays.',
+                    'city-title': 'In City Tours',
+                    'city-desc': 'Dive into history and culture by exploring ancient cities and their timeless stories.',
+                    'abroad-title': 'Abroad Tours',
+                    'abroad-desc': 'Conquer majestic peaks and enjoy stunning mountain vistas. An adventure for the brave.',
+                    'contact-title': 'Contact Us',
+                    'contact-whatsapp': 'Chat on WhatsApp',
+                    'copyright': '&copy; 2024 Boyacıoğlu Turizm. All rights reserved.'
+                },
+                tr: {
+                    'nav-home': 'Ana Sayfa',
+                    'nav-services': 'Hizmetler',
+                    'nav-contact': 'İletişim',
+                    'hero-title': 'Yeni Maceranızı Keşfedin',
+                    'hero-subtitle': 'Modern kaşifler için tasarlanmış özel minibüs turları.',
+                    'hero-button': 'Hizmetleri Keşfet',
+                    'services-title': 'Hizmetlerimiz',
+                    'vip-title': 'VIP Transferler',
+                    'vip-desc': 'Özel VIP transfer hizmetimizle şık ve konforlu seyahat edin. İş seyahatleri, özel günler veya sadece lüks bir yolculuk için mükemmel.',
+                    'airport-title': 'Havaalanı Transferi',
+                    'airport-desc': 'Sizi uçuşunuza veya varış noktanıza sorunsuz bir şekilde ulaştırmak için güvenilir ve zamanında havaalanı transferleri. Uçuşunuzu takip ediyor ve gecikmelere göre ayarlama yapıyoruz.',
+                    'city-title': 'Şehir İçi Turlar',
+                    'city-desc': 'Antik şehirleri ve onların zamansız hikayelerini keşfederek tarihe ve kültüre dalın.',
+                    'abroad-title': 'Yurt Dışı Turları',
+                    'abroad-desc': 'Görkemli zirveleri fethedin ve büyüleyici dağ manzaralarının tadını çıkarın. Cesurlar için bir macera.',
+                    'contact-title': 'Bize Ulaşın',
+                    'contact-whatsapp': 'WhatsApp\'ta Sohbet Edin',
+                    'copyright': '&copy; 2024 Boyacıoğlu Turizm. Tüm hakları saklıdır.'
+                }
+            };
+
+            const languageLinks = document.querySelectorAll('.lang-link');
+
+            const setLanguage = (lang) => {
+                document.querySelectorAll('[data-key]').forEach(elem => {
+                    const key = elem.getAttribute('data-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        elem.innerHTML = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+
+                languageLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('data-lang') === lang);
+                });
+            };
+
+            languageLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = link.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+
+            const savedLang = localStorage.getItem('language') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+
+</body>
+</html>

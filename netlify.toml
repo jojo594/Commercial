@@ -1,0 +1,10 @@
+[build]
+  # This command is not needed for a static site, but the file is required.
+  command = ""
+  # The directory to publish, which is the root for your project.
+  publish = "." 
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
